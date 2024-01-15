@@ -55,7 +55,7 @@ fi
 
 export i_size=$(( w_height*6/10 ))
 if [ $i_size -lt 12 ] ; then
-    export i_size="12"
+    export i_size="20"
 fi
 
 export i_theme=`gsettings get org.gnome.desktop.interface icon-theme | sed "s/'//g"`

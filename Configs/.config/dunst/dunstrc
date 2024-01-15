@@ -4,7 +4,7 @@
     ### Display ###
 
     # Which monitor should the notifications be displayed on.
-    monitor = 0
+    monitor = 1
 
     # Display notification on focused monitor.  Possible modes are:
     #   mouse: follow mouse pointer
@@ -24,7 +24,7 @@
     # dynamic width from 0 to 300
     # width = (0, 300)
     # constant width of 300
-    width = 300
+    width = 500
 
     # The maximum height of a single notification, excluding the frame.
     height = 300
@@ -39,7 +39,7 @@
     scale = 0
 
     # Maximum number of notification (0 means no limit)
-    notification_limit = 20
+    notification_limit = 0
 
     ### Progress bar ###
 
@@ -123,7 +123,7 @@
 
     ### Text ###
 
-    font = mononoki Nerd Font 8
+    font = CaskaydiaCove Nerd Font 11
 
     # The spacing between lines.  If the height is smaller than the
     # font height, it will get raised to the font height.
@@ -163,7 +163,7 @@
     #   %n  progress value if set without any extra characters
     #   %%  Literal %
     # Markup is allowed
-    format = "󰟪 %a\n<b>󰋑 %s</b>\n%b"
+    format = " %a\n<b>󱋊 %s</b>\n%b"
 
     # Alignment of message text.
     # Possible values are "left", "center" and "right".
@@ -451,15 +451,15 @@
     #default_icon = /path/to/icon
 
 [urgency_low]
-    background = "#22232A"
-    foreground = "#E2DFD1"
-    frame_color = "#262C48"
+    background = "#313139"
+    foreground = "#D4D4C1"
+    frame_color = "#3B4461"
     icon = "~/.config/dunst/icons/hyprdots.svg"
     timeout = 10
 
 [urgency_normal]
-    background = "#4D5C78"
-    foreground = "#E2DFD1"
-    frame_color = "#622D28"
+    background = "#3F3A4E"
+    foreground = "#D4D4C1"
+    frame_color = "#5B536D"
     icon = "~/.config/dunst/icons/hyprdots.svg"
     timeout = 10
