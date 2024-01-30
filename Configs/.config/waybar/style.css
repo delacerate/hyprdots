@@ -1,10 +1,10 @@
 * {
     border: none;
     border-radius: 0px;
-    font-family: "JetBrainsMono Nerd Font";
+    font-family: "CodeNewRoman Nerd Font";
     font-weight: bold;
-    font-size: 11px;
-    min-height: 10px;
+    font-size: 15px;
+    min-height: 11px;
 }
 
 @import "themes/theme.css";
@@ -113,6 +113,7 @@ tooltip {
 #workspaces,
 #custom-l_end,
 #custom-r_end,
+/* #custom-spotify, */
 #custom-sl_end,
 #custom-sr_end,
 #custom-rl_end,
@@ -120,9 +121,22 @@ tooltip {
     color: @main-fg;
     background: @main-bg;
     opacity: 1;
-    margin: 4px 0px 4px 0px;
+    margin: 3px 0px 3px 0px;
     padding-left: 4px;
     padding-right: 4px;
+}
+
+
+#custom-spotify{
+    background-color: #1db954;
+    color: black;
+    border-radius: 70px;
+    margin-right: 3px;
+    margin-left: 3px;
+    /* padding-right: 2px; */
+    /* padding-left: 2px; */
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 #workspaces,
@@ -132,36 +146,36 @@ tooltip {
 
 #custom-r_end {
     border-radius: 0px 21px 21px 0px;
-    margin-right: 9px;
-    padding-right: 3px;
+    margin-right: 3px;
+    padding-right: 2px;
 }
 
 #custom-l_end {
     border-radius: 21px 0px 0px 21px;
-    margin-left: 9px;
-    padding-left: 3px;
+    margin-left: 3px;
+    padding-left: 2px;
 }
 
 #custom-sr_end {
     border-radius: 0px;
-    margin-right: 9px;
-    padding-right: 3px;
+    margin-right: 3px;
+    padding-right: 2px;
 }
 
 #custom-sl_end {
     border-radius: 0px;
-    margin-left: 9px;
-    padding-left: 3px;
+    margin-left: 3px;
+    padding-left: 2px;
 }
 
 #custom-rr_end {
-    border-radius: 0px 7px 7px 0px;
-    margin-right: 9px;
-    padding-right: 3px;
+    border-radius: 0px 4px 4px 0px;
+    margin-right: 3px;
+    padding-right: 2px;
 }
 
 #custom-rl_end {
-    border-radius: 7px 0px 0px 7px;
-    margin-left: 9px;
-    padding-left: 3px;
+    border-radius: 4px 0px 0px 4px;
+    margin-left: 3px;
+    padding-left: 2px;
 }

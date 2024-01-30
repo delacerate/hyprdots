@@ -1,20 +1,17 @@
-/*
- * vim: ft=less
- */
-
 @define-color noti-border-color rgba(255, 255, 255, 0.15);
-@define-color noti-bg #2E3440;
-@define-color noti-bg-alt #383E4A;
-@define-color noti-fg #E5E9F0;
-@define-color noti-bg-hover #81A1C1;
-@define-color noti-bg-focus #A3BE8C;
+@define-color noti-bg rgba(51,51,51,1);
+@define-color noti-bg-hover-alt #454545;
+@define-color noti-bg-alt rgba(43,43,43,0.7);
+@define-color noti-fg white;
+@define-color noti-bg-hover rgba(255, 255, 255, 0.1);
+@define-color noti-bg-focus rgba(255, 255, 255, 0.1);
 @define-color noti-close-bg rgba(255, 255, 255, 0.1);
 @define-color noti-close-bg-hover rgba(255, 255, 255, 0.15);
-@define-color noti-urgent #BF616A;
-
-@define-color bg-selected rgb(0, 128, 255);
+@define-color noti-urgent rgba(255,0,80,0.8);
+@define-color bg-selected #26A69A;
 
 * {
+  font-family: FontAwesome, "Noto Sans";
   color: @noti-fg;
 }
 
@@ -28,37 +25,29 @@
 }
 
 .notification {
-  border-radius: 12px;
+  border: 1px solid @bg-selected;
+  border-radius: 4px;
   margin: 6px 12px;
-  box-shadow:
-    0 0 0 1px rgba(0, 0, 0, 0.3),
-    0 1px 3px 1px rgba(0, 0, 0, 0.7),
-    0 2px 6px 2px rgba(0, 0, 0, 0.3);
+  box-shadow: none;
   padding: 0;
 }
 
 /* Uncomment to enable specific urgency colors */
 /* .low {
   background: yellow;
-  padding: 6px;
-  border-radius: 12px;
 }
 .normal {
   background: green;
-  padding: 6px;
-  border-radius: 12px;
 } */
 
 .critical {
-  background: @noti-urgent;
-  padding: 2px;
-  border-radius: 12px;
+  border: 1px solid @noti-urgent;
 }
 
 .notification-content {
   background: transparent;
   padding: 6px;
-  border-radius: 12px;
+  border-radius: 4px;
 }
 
 .close-button {
@@ -95,11 +84,11 @@
 .notification-default-action:hover,
 .notification-action:hover {
   -gtk-icon-effect: none;
-  background: @noti-bg-hover;
+  background: @noti-bg-alt;
 }
 
 .notification-default-action {
-  border-radius: 12px;
+  border-radius: 4px;
 }
 
 /* When alternative actions are visible */
@@ -116,11 +105,11 @@
 
 /* add bottom border radius to eliminate clipping */
 .notification-action:first-child {
-  border-bottom-left-radius: 10px;
+  border-bottom-left-radius: 4px;
 }
 
 .notification-action:last-child {
-  border-bottom-right-radius: 10px;
+  border-bottom-right-radius: 4px;
   border-right: 1px solid @noti-border-color;
 }
 
@@ -130,11 +119,11 @@
 .body-image {
   margin-top: 6px;
   background-color: white;
-  border-radius: 12px;
+  border-radius: 6px;
 }
 
 .summary {
-  font-size: 16px;
+  font-size: 14px;
   font-weight: bold;
   background: transparent;
   color: white;
@@ -142,7 +131,7 @@
 }
 
 .time {
-  font-size: 16px;
+  font-size: 13px;
   font-weight: bold;
   background: transparent;
   color: white;
@@ -151,7 +140,7 @@
 }
 
 .body {
-  font-size: 15px;
+  font-size: 12px;
   font-weight: normal;
   background: transparent;
   color: white;
@@ -166,6 +155,8 @@
 
 .control-center {
   background-color: @noti-bg-alt;
+  border-radius: 6px;
+  border: 1px solid @bg-selected;
 }
 
 .control-center-list {
@@ -186,7 +177,7 @@
 /* Title widget */
 .widget-title {
   margin: 8px;
-  font-size: 1.5rem;
+  font-size: 16px;
 }
 
 .widget-title > button {
@@ -196,7 +187,7 @@
   background: @noti-bg;
   border: 1px solid @noti-border-color;
   box-shadow: none;
-  border-radius: 12px;
+  border-radius: 4px;
 }
 
 .widget-title > button:hover {
@@ -211,7 +202,7 @@
 
 .widget-dnd > switch {
   font-size: initial;
-  border-radius: 12px;
+  border-radius: 4px;
   background: @noti-bg;
   border: 1px solid @noti-border-color;
   box-shadow: none;
@@ -223,16 +214,16 @@
 
 .widget-dnd > switch slider {
   background: @noti-bg-hover;
-  border-radius: 12px;
+  border-radius: 4px;
 }
 
 /* Label widget */
 .widget-label {
-  margin: 8px;
+  margin: 4px 8px 8px;
 }
 
 .widget-label > label {
-  font-size: 1.1rem;
+  font-size: 16px;
 }
 
 /* Mpris widget */
@@ -258,10 +249,10 @@
 
 .widget-volume {
   background-color: @noti-bg;
-  padding: 4px 8px 8px 8px;
+  padding: 4px 4px 4px 20px;
   margin: 0px 8px 8px 8px;
-  border-bottom-left-radius: 12px;
-  border-bottom-right-radius: 12px;
+  border-radius: 4px;
+  font-size: 14px;
 }
 
 .widget-backlight {
@@ -278,60 +269,57 @@
   border-radius: 0;
 }
 
-.power-buttons {
+.widget-menubar > box {
+  padding: 8px 0px 4px;
+  margin: 0px 8px;
+  border-radius: 4px 4px 0px 0px;
   background-color: @noti-bg;
-  padding: 8px;
-  margin: 8px;
-  border-radius: 12px;
-}
-
-.power-buttons > button {
-  background: transparent;
-  border: none;
-}
-
-.power-buttons > button:hover {
-  background: @noti-bg-hover;
 }
 
 .widget-menubar > box > .menu-button-bar > button {
-  border: none;
-  background: transparent;
-}
-
-.topbar-buttons > button {
-  border: none;
-  background: transparent;
+  border: 1px solid @noti-border-color;
+  background: @noti-bg;
+  border-radius: 4px;
+  margin: 4px 12px;
 }
 
 .widget-buttons-grid {
-  padding: 8px;
-  margin: 8px;
-  border-radius: 12px;
+  padding: 0px 8px 8px;
+  margin: 0px 8px 8px;
+  border-radius: 0px 0px 4px 4px;
   background-color: @noti-bg;
+  font-size: 14px;
 }
 
 .widget-buttons-grid > flowbox > flowboxchild > button {
   background: @noti-bg;
-  border-radius: 12px;
+  border-radius: 4px;
 }
 
 .widget-buttons-grid > flowbox > flowboxchild > button:hover {
   background: @noti-bg-hover;
 }
 
-.powermode-buttons {
-  background-color: @noti-bg;
-  padding: 8px;
-  margin: 8px;
-  border-radius: 12px;
+.screenshot-buttons,
+.screencast-buttons,
+.powermode-buttons,
+.power-buttons {
+  border-radius: 4px;
 }
 
-.powermode-buttons > button {
+.screenshot-buttons > button,
+.screencast-buttons > button,
+.powermode-buttons > button,
+.power-buttons > button {
   background: transparent;
-  border: none;
+  padding: 2px 0px;
+  margin: 5px 70px 3px;
+  border: 1px solid @noti-border-color;
 }
 
-.powermode-buttons > button:hover {
+.screenshot-buttons > button:hover,
+.screencast-buttons > button:hover,
+.powermode-buttons > button:hover,
+.power-buttons > button:hover {
   background: @noti-bg-hover;
 }

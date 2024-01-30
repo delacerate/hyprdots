@@ -2,7 +2,7 @@
 
 {
 // sourced from header module //
-
+    "output": "eDP-1",
     "layer": "top",
     "position": "${w_position}",
     "mod": "dock",

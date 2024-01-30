@@ -1,10 +1,10 @@
 * {
     border: none;
     border-radius: 0px;
-    font-family: "JetBrainsMono Nerd Font";
+    font-family: "CodeNewRoman Nerd Font";
     font-weight: bold;
-    font-size: ${s_fontpx}px;
-    min-height: 10px;
+    font-size: 15px;
+    min-height: 11px;
 }
 
 @import "themes/theme.css";
@@ -91,6 +91,7 @@ tooltip {
 ${modules_ls}
 #custom-l_end,
 #custom-r_end,
+/* #custom-spotify, */
 #custom-sl_end,
 #custom-sr_end,
 #custom-rl_end,
@@ -101,6 +102,19 @@ ${modules_ls}
     margin: ${g_margin}px 0px ${g_margin}px 0px;
     padding-left: ${g_paddin}px;
     padding-right: ${g_paddin}px;
+}
+
+
+#custom-spotify{
+    background-color: #1db954;
+    color: black;
+    border-radius: 70px;
+    margin-right: ${e_margin}px;
+    margin-left: ${e_margin}px;
+    /* padding-right: ${e_paddin}px; */
+    /* padding-left: ${e_paddin}px; */
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 #workspaces,

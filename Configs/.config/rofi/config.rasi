@@ -36,7 +36,7 @@ mainbox {
     orientation:                 horizontal;
     children:                    [  "inputbar" , "listbox" ];
     background-color:            transparent;
-    background-image:            url("~/.config/swww/wall.blur", height);
+    //background-image:            url("~/.config/swww/wall.blur", height);//
 }
 
 
@@ -46,7 +46,7 @@ inputbar {
     width:                       640px;
     children:                    [ "mode-switcher" , "entry" ];
     background-color:            transparent;
-    background-image:            url("~/.config/swww/wall.rofi", height);
+    background-image:            url("~/.config/swww/ryujin.jpg", height);
 }
 entry {
     enabled:                     false;
@@ -62,7 +62,7 @@ mode-switcher{
     padding:                     160px 10px 160px 10px;
     spacing:                     25px;
     background-color:            transparent;
-    background-image:            url("~/.config/swww/wall.blur", height);
+    // background-image:            url("~/.config/swww/wall.blur", height);//
 }
 button {
     cursor:                      pointer;

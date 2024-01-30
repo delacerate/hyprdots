@@ -1,7 +1,7 @@
     "memory": {
         "interval": 30,
-        "format": "󰾆 {percentage}%",
-        "format-alt": "󰾅 {used}GB",
+        "format-alt": "󰾆 {percentage}%",
+        "format": "  {used}GB",
         "max-length": 10,
         "tooltip": true,
         "tooltip-format": " {used:0.1f}GB/{total:0.1f}GB"
