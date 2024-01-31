@@ -1,0 +1,13 @@
+"temperature": {
+    "interval": 10,
+    "tooltip": false,
+    "hwmon-path": "/sys/class/hwmon/hwmon1/temp1_input",
+    "thermal-zone": 0,
+    "critical-threshold": 82,
+    "format-critical": " {icon} {temperatureC}°C",
+    //"format": "<span color='#5e81ac'>{icon}</span>{temperatureC}°C",
+    "format-icons": [" "], 
+    "format": "{icon} {temperatureC}°C",
+    "on-click-right": "kitty --title btop sh -c 'btop'"
+  },
+
